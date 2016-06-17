@@ -1,8 +1,24 @@
 # tpoll
 
-tpoll aims to provide tcp connection management , it contains server side and client side
+tpoll aims to provide tcp connection management , the pool is only necessary in client side
 
 
-question:
-while listen tcp, how server use another port to connect to client??? is this true??
+# install
+```
+go get github.com/yuanyangen/tpool
+```
 
+# usage
+
+get a connection 
+```
+	tcpConn, _ := GetTCPConn("www.so.com:80")
+	
+```
+
+
+put back this connection
+```
+	tcpConn, _ = GetTCPConn("www.so.com:80")
+
+```
